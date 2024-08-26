@@ -20,7 +20,11 @@ window.addEventListener('scroll', () => {
     0% {opacity: 0; transform: translateY(50px);}
     100% {opacity: 1; transform: translateY(0);}
 }
-function toggleMenu() {
-    const drawer = document.getElementById('drawer');
-    drawer.classList.toggle('open');
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.querySelector('.menu-icon');
+    const drawer = document.querySelector('.drawer');
+
+    menuIcon.addEventListener('click', function() {
+        drawer.classList.toggle('open');
+    });
+});
