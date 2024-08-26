@@ -12,69 +12,72 @@ header {
     background: linear-gradient(135deg, #6e45e2, #88d3ce);
     color: white;
     text-align: center;
-    padding: 100px 0;
+    padding: 60px 0;
     position: relative;
     overflow: hidden;
 }
 
-header .menu-container {
+header::before {
+    content: '';
     position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
+    width: 300%;
+    height: 300%;
+    top: -100%;
+    left: -100%;
+    background: radial-gradient(circle, rgba(0,0,0,0) 20%, rgba(255,255,255,0.1) 20%);
+    animation: animateBackground 20s linear infinite;
 }
 
-.menu-icon {
-    background: #6e45e2;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 24px;
-    cursor: pointer;
+@keyframes animateBackground {
+    0% {transform: translateX(0) translateY(0);}
+    100% {transform: translateX(100%) translateY(100%);}
 }
 
-/* Drawer Styles */
-.drawer {
-    position: fixed;
-    top: 0;
-    left: -250px; /* Hide drawer initially */
-    width: 250px;
-    height: 100%;
-    background: #333;
-    color: #fff;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-}
-
-.drawer.open {
-    transform: translateX(0);
-}
-
-.drawer ul {
+header nav ul {
     list-style: none;
-    padding: 20px;
+    padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.drawer ul li {
-    margin: 15px 0;
+header nav ul li {
+    margin: 10px 15px;
 }
 
-.drawer ul li a {
-    color: #fff;
+header nav ul li a {
+    color: white;
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
-.drawer ul li a:hover {
+header nav ul li a:hover {
     color: #ffdd57;
+    transform: scale(1.1);
 }
 
-/* Hero Section */
-.hero {
-    padding: 20px;
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: fadeInDown 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    0% {opacity: 0; transform: translateY(-50px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+    0% {opacity: 0; transform: translateY(50px);}
+    100% {opacity: 1; transform: translateY(0);}
 }
 
 /* About Section */
@@ -118,16 +121,6 @@ header .menu-container {
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid #8338ec;
-    animation: rotateAnim 3s linear infinite;
-}
-
-@keyframes rotateAnim {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 .picture-container img {
@@ -338,8 +331,25 @@ footer {
         align-items: center;
     }
 
-    .drawer {
-        left: 0;
-        transform: translateX(0);
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #about {
+        padding: 40px 20px;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    #skills .skill, .project-card {
+        width: 90%;
+        max-width: 400px;
     }
 }
