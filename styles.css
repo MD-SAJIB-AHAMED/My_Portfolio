@@ -118,6 +118,7 @@ header .menu-container {
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid #8338ec;
+    animation: rotateAnim 3s linear infinite;
 }
 
 @keyframes rotateAnim {

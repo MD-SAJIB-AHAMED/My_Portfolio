@@ -11,56 +11,65 @@
 
 <header>
     <div class="menu-container">
-        <button class="menu-icon" onclick="toggleDrawer()">
+        <button class="menu-icon" onclick="toggleMenu()">
             &#9776; <!-- Unicode for hamburger icon -->
         </button>
+        <nav class="drawer" id="drawer">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-    <nav class="drawer" id="drawer">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
     <div class="hero">
         <h1>Welcome to My Portfolio</h1>
         <p>Explore my work and skills</p>
     </div>
 </header>
 
-<section id="about">
-    <h2>About Me</h2>
-    <section id="about-me">
-        <div class="picture-container">
-            <img src="sajib.png" alt="SAJIB's Picture">
-            <div class="overlay">
-                <h2>SAJIB</h2>
-                <p>Computer Science & Engineering Student</p>
-            </div>
-        </div>
-    </section>
-    <p>I'm SAJIB, 22 years old, studying Computer Science and Engineering at TMSS Engineering College, affiliated with the University of Rajshahi. I specialize in Android development, web development, and programming languages such as C, C++, Java, HTML, and CSS.</p>
-    <a href="https://drive.google.com/file/d/1MobCuz-aM--ZbVM0zVNpZ78kHQt8VY8Q/view?usp=sharing" target="_blank" class="btn">View My CV</a>
-</section>
+<div class="drawer" id="drawer">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-container">
-        <div class="skill">
-            <h3>Android Development</h3>
-            <p>Java, XML, Firebase</p>
-        </div>
-        <div class="skill">
-            <h3>Web Development</h3>
-            <p>HTML, CSS, JavaScript</p>
-        </div>
-        <div class="skill">
-            <h3>Programming Languages</h3>
-            <p>C, C++, Java</p>
+    <section id="about">
+        <h2>About Me</h2>
+<section id="about-me">
+    <div class="picture-container">
+        <img src="sajib.png" alt="SAJIB's Picture">
+        <div class="overlay">
+            <h2>SAJIB</h2>
+            <p>Computer Science & Engineering Student</p>
         </div>
     </div>
 </section>
+        <p>I'm SAJIB, 22 years old, studying Computer Science and Engineering at TMSS Engineering College, affiliated with the University of Rajshahi. I specialize in Android development, web development, and programming languages such as C, C++, Java, HTML, and CSS.</p>
+<a href="https://drive.google.com/file/d/1MobCuz-aM--ZbVM0zVNpZ78kHQt8VY8Q/view?usp=sharing" target="_blank" class="btn">View My CV</a>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>Android Development</h3>
+                <p>Java, XML, Firebase</p>
+            </div>
+            <div class="skill">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+            <div class="skill">
+                <h3>Programming Languages</h3>
+                <p>C, C++, Java</p>
+            </div>
+        </div>
+    </section>
 
 <section id="projects">
     <h2>Projects</h2>
@@ -93,26 +102,24 @@
     </div>
 </section>
 
-<section id="contact" class="section">
-    <h2>Contact</h2>
-    <ul>
-        <li><a href="https://www.facebook.com/MDSAJIB.CSE" target="_blank">Facebook</a></li>
-        <li><a href="https://linkedin.com/in/MDSAJIB" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/MD-SAJIB-AHAMED" target="_blank">GitHub</a></li>
-        <li><a href="mailto:sksojib5688@gmail.com">Email: sksojib5688@gmail.com</a></li>
-    </ul>
-</section>
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <ul>
+            <li><a href="https://www.facebook.com/MDSAJIB.CSE" target="_blank">Facebook</a></li>
+            <li><a href="https://linkedin.com/in/MDSAJIB" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/MD-SAJIB-AHAMED" target="_blank">GitHub</a></li>
+            <li><a href="mailto:sksojib5688@gmail.com">Email: sksojib5688@gmail.com</a></li>
+        </ul>
+    </section>
 
-<footer>
-    <p>&copy; 2024 SAJIB's Portfolio. All Rights Reserved.</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2024 SAJIB's Portfolio. All Rights Reserved.</p>
+    </footer>
 <script>
 function toggleDrawer() {
     const drawer = document.getElementById('drawer');
     drawer.classList.toggle('open');
 }
 </script>
-
 </body>
 </html>
