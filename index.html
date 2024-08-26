@@ -3,27 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAJIB's Portfolio</title>
+    <title>SAJIB Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
+
+<header>
+    <div class="menu-container">
+        <button class="menu-icon" onclick="toggleMenu()">
+            &#9776; <!-- Unicode for hamburger icon -->
+        </button>
+        <nav class="drawer" id="drawer">
             <ul>
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-				<li><a href="https://drive.google.com/file/d/1MobCuz-aM--ZbVM0zVNpZ78kHQt8VY8Q/view?usp=sharing" target="_blank" class="btn">View My CV</a></li>
             </ul>
         </nav>
-        <div class="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <p>I'm SAJIB, a passionate CSE student and developer</p>
-        </div>
-    </header>
+    </div>
+    <div class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my work and skills</p>
+    </div>
+</header>
+
+<div class="drawer" id="drawer">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
 
     <section id="about">
         <h2>About Me</h2>
@@ -102,5 +115,11 @@
     <footer>
         <p>&copy; 2024 SAJIB's Portfolio. All Rights Reserved.</p>
     </footer>
+<script>
+function toggleDrawer() {
+    const drawer = document.getElementById('drawer');
+    drawer.classList.toggle('open');
+}
+</script>
 </body>
 </html>
