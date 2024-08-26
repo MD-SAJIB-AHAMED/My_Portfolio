@@ -3,60 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>SAJIB's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>My Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="#about">About Me</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://drive.google.com/file/d/1MobCuz-aM--ZbVM0zVNpZ78kHQt8VY8Q/view?usp=sharing" target="_blank" class="btn">View My CV</a></li>
+				<li><a href="https://drive.google.com/file/d/1MobCuz-aM--ZbVM0zVNpZ78kHQt8VY8Q/view?usp=sharing" target="_blank" class="btn">View My CV</a></li>
             </ul>
         </nav>
+        <div class="hero">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I'm SAJIB, a passionate CSE student and developer</p>
+        </div>
     </header>
 
-    <section id="about" class="section">
+    <section id="about">
         <h2>About Me</h2>
-        <img src="sajib.png" alt="SAJIB" class="profile-pic">
-        <p><strong>Name:</strong> SAJIB</p>
-        <p><strong>I am a Computer Science and Engineering student with a passion for technology and software development. My skills span both Android development and web development, where I have experience in creating robust applications and dynamic websites. I am proficient in programming languages including C, C++, Java, HTML, and CSS, allowing me to build and maintain various types of software solutions. With a strong foundation in computer science principles and hands-on experience in development, I am dedicated to learning and applying my skills to real-world projects.</strong></p>
-        <p><strong>Department:</strong> Computer Science and Engineering</p>
-        <p><strong>College:</strong> TMSS Engineering College - University of Rajshahi Affiliated</p>
-        <a href="https://drive.google.com/file/d/1MobCuz-aM--ZbVM0zVNpZ78kHQt8VY8Q/view?usp=sharing" target="_blank" class="btn">View My CV</a>
+<section id="about-me">
+    <div class="picture-container">
+        <img src="sajib.png" alt="SAJIB's Picture">
+        <div class="overlay">
+            <h2>SAJIB</h2>
+            <p>Computer Science & Engineering Student</p>
+        </div>
+    </div>
+</section>
+        <p>I'm SAJIB, 22 years old, studying Computer Science and Engineering at TMSS Engineering College, affiliated with the University of Rajshahi. I specialize in Android development, web development, and programming languages such as C, C++, Java, HTML, and CSS.</p>
+<a href="https://drive.google.com/file/d/1MobCuz-aM--ZbVM0zVNpZ78kHQt8VY8Q/view?usp=sharing" target="_blank" class="btn">View My CV</a>
     </section>
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="project">
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>Android Development</h3>
+                <p>Java, XML, Firebase</p>
+            </div>
+            <div class="skill">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+            <div class="skill">
+                <h3>Programming Languages</h3>
+                <p>C, C++, Java</p>
+            </div>
+        </div>
+    </section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-container">
+        <div class="project-card">
             <h3>CGPA Grade Calculator</h3>
             <p>This desktop application calculates the CGPA Grade of semesters based on the grades that a student achieves.</p>
             <a href="https://github.com/MD-SAJIB-AHAMED/CGPA-Grade-Calculate" target="_blank">GitHub Link</a>
         </div>
-        <div class="project">
+        <div class="project-card">
             <h3>BMI Calculator (Android)</h3>
             <p>It is an Android application that allows users to calculate their BMI from their height (kg) and weight (feet & inch).</p>
             <a href="https://github.com/MD-SAJIB-AHAMED/BMICALCULATOR" target="_blank">GitHub Link</a>
         </div>
-        <div class="project">
+        <div class="project-card">
             <h3>Digital Tajbih (Android)</h3>
             <p>A digital Tasbih is a virtual version of the traditional Islamic prayer beads used by Muslims to count the repetition of certain phrases or dhikr (remembrance of Allah).</p>
             <a href="https://github.com/MD-SAJIB-AHAMED/DigitalTajbih" target="_blank">GitHub Link</a>
         </div>
-        <div class="project">
+        <div class="project-card">
             <h3>Zakat Calculation (Android)</h3>
             <p>This Android application helps users calculate their Zakat, an obligatory form of almsgiving in Islam. The app provides an easy-to-use interface and accurate calculations in the users' native languages.</p>
             <a href="https://github.com/MD-SAJIB-AHAMED/ZakatCalculation" target="_blank">GitHub Link</a>
         </div>
-        <div class="project">
+        <div class="project-card">
             <h3>LanCon (Android)</h3>
             <p>A robust Android application designed to facilitate offline communication between devices connected to the same local Wi-Fi network.</p>
             <a href="https://github.com/MD-SAJIB-AHAMED/LanCon-Application" target="_blank">GitHub Link</a>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="contact" class="section">
         <h2>Contact</h2>
@@ -69,9 +100,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 SAJIB. All rights reserved.</p>
+        <p>&copy; 2024 SAJIB's Portfolio. All Rights Reserved.</p>
     </footer>
-
-    <script src="scripts.js"></script>
 </body>
 </html>
