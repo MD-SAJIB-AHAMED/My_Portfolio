@@ -1,30 +1,51 @@
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+document.addEventListener('DOMContentLoaded', function () {
+    // Typing Effect
+    const heroText = document.querySelector('.hero h1');
+    const textArray = ["Welcome to My Developer Portfolio", "Exploring the intersection of code and creativity.", "Building the future with code."];
+    let textIndex = 0;
+    let charIndex = 0;
 
-// Trigger animation on scroll
-window.addEventListener('scroll', () => {
-    document.querySelectorAll('.skill, .project').forEach((element, index) => {
-        if (element.getBoundingClientRect().top < window.innerHeight - 50) {
-            element.style.animation = `fadeInUp 0.8s ease-out ${index * 0.2}s forwards`;
+const hours = new Date().getHours();
+    if (hours < 12) {
+        hero.textContent = 'Good Morning, Welcome to My Portfolio';
+    } else if (hours < 18) {
+        hero.textContent = 'Good Afternoon, Welcome to My Portfolio';
+    } else {
+        hero.textContent = 'Good Evening, Welcome to My Portfolio';
+    }
+
+    function typeText() {
+        if (charIndex < textArray[textIndex].length) {
+            heroText.textContent += textArray[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typeText, 100);
+        } else {
+            setTimeout(eraseText, 2000);
         }
-    });
-});
+    }
 
-@keyframes fadeInUp {
-    0% {opacity: 0; transform: translateY(50px);}
-    100% {opacity: 1; transform: translateY(0);}
-}
-document.addEventListener('DOMContentLoaded', function() {
-    const menuIcon = document.querySelector('.menu-icon');
-    const drawer = document.querySelector('.drawer');
+    function eraseText() {
+        if (charIndex > 0) {
+            heroText.textContent = textArray[textIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(eraseText, 50);
+        } else {
+            textIndex = (textIndex + 1) % textArray.length;
+            setTimeout(typeText, 500);
+        }
+    }
 
-    menuIcon.addEventListener('click', function() {
-        drawer.classList.toggle('open');
+    setTimeout(typeText, 500);
+
+    // Smooth Scroll
+    const scrollLinks = document.querySelectorAll('a[href^="#"]');
+    scrollLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            document.querySelector(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
 });
