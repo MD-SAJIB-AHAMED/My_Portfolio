@@ -1,18 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Typing Effect
     const heroText = document.querySelector('.hero h1');
-    const textArray = ["Welcome to My Developer Portfolio", "Exploring the intersection of code and creativity.", "Building the future with code."];
+    const textArray = [];
+    const hours = new Date().getHours();
+
+    if (hours < 12) {
+        textArray.push("Good Morning");
+    } else if (hours < 18) {
+        textArray.push("Good Afternoon");
+    } else {
+        textArray.push("Good Evening");
+    }
+
+    // Add additional texts
+    textArray.push("Welcome to My Developer Portfolio", "Exploring the intersection of code and creativity.", "Building the future with code.");
+
     let textIndex = 0;
     let charIndex = 0;
-
-const hours = new Date().getHours();
-    if (hours < 12) {
-        hero.textContent = 'Good Morning, Welcome to My Portfolio';
-    } else if (hours < 18) {
-        hero.textContent = 'Good Afternoon, Welcome to My Portfolio';
-    } else {
-        hero.textContent = 'Good Evening, Welcome to My Portfolio';
-    }
 
     function typeText() {
         if (charIndex < textArray[textIndex].length) {
